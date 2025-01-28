@@ -1,0 +1,119 @@
+.register-page {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  
+  .split-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  .split-container.reverse {
+    flex-direction: row-reverse;
+  }
+  
+  .split-text {
+    flex: 2;
+    font-family: 'Crafty Girls', cursive;
+    text-align: left;
+  }
+  
+  .split-text h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  .split-text h2, 
+.subscribe-section h2 {
+  color: #594A47;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #594A47;
+  font-family: "Crafty Girls", cursive;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+  
+  .split-text p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: rgba(0, 0, 0, 0.7);
+  }
+  
+  .subscribe-section {
+    background-color: #f4eae8;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  .subscribe-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  .subscribe-input {
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    border: 1px solid #594A47;
+    background: #FFF;
+    font-size: 1rem;
+    color: rgba(0, 0, 0, 0.7);
+  }
+  
+  .subscribe-input::placeholder {
+    color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .subscribe-button {
+    grid-column: span 2;
+    padding: 0.5rem 1.5rem;
+    border-radius: 5px;
+    background-color: #594A47;
+    color: #FFF;
+    font-family: 'Crafty Girls', cursive;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .subscribe-button:hover {
+    background-color: #4A3E3B;
+  }
+  
+  @media (max-width: 768px) {
+    .split-container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .split-image,
+    .split-text {
+      flex: unset;
+      width: 100%;
+    }
+  
+    .split-image img {
+      max-width: 80%;
+    }
+  
+    .subscribe-form {
+      grid-template-columns: 1fr;
+    }
+  
+    .subscribe-button {
+      grid-column: span 1;
+    }
+  }
+  

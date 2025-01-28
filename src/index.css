@@ -9,4 +9,9 @@ body {
     text-align: center;
     margin-top: 2rem;
   }
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
   

@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Crafty+Girls&display=swap');
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  max-width: 1440px; /* Match footer width */
+  height: 100px;
+  background-color: #F4EAE8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  box-sizing: border-box;
+  font-family: 'Crafty Girls', cursive;
+  z-index: 1000;
+  margin: 0 auto; /* Center align like footer */
+}
+
+
+.navbar-logo {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar-logo img {
+  height: 120px;
+  max-width: 100%;
+}
+
+.navbar-links {
+  flex: 2;
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.2rem;
+  font-weight: normal;
+  font-family: 'Crafty Girls', cursive;
+}
+
+.navbar-links .register-now {
+  color: #FFF;
+  background-color: #594A47;
+  padding: 0.5rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: normal;
+  font-family: 'Crafty Girls', cursive;
+  transition: all 0.3s ease;
+}
+
+.navbar-links .register-now:hover {
+  background-color: #4A3E3B;
+}
+
+@media (max-width: 768px) {
+  .navbar-links .register-now {
+    font-size: 1rem;
+    padding: 0.4rem 1rem;
+  }
+
+  .navbar-logo img {
+    height: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-links .register-now {
+    font-size: 0.9rem;
+    padding: 0.3rem 0.8rem;
+  }
+}
