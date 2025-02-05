@@ -7,7 +7,7 @@ import ContactForm from '../features/ContactForm';
 const RegisterPage = () => {
   return (
     <div className="register-page">
-      {/* Top Section Block */}
+      {/* Contact Us Message */}
       <SectionBlock bgColor="white">
         <div className="split-container">
           <div className="split-text">
@@ -19,7 +19,7 @@ const RegisterPage = () => {
         </div>
       </SectionBlock>
 
-      {/* Register Form */}
+      {/* Contact Form */}
       <SectionBlock bgColor="#f4eae8">
         <ContactForm />
       </SectionBlock>

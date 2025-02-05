@@ -25,7 +25,7 @@ const RegisterForm = () => {
         <div className="form-group">
           <input
             type="email"
-            placeholder="email Address"
+            placeholder="email"
             className="form-input"
           />
         </div>

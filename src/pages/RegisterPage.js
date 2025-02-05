@@ -8,7 +8,7 @@ import Image2 from '../assets/testimonial.png';
 const RegisterPage = () => {
   return (
     <div className="register-page">
-      {/* Top Section Block */}
+      {/* Register Welcome */}
       <SectionBlock bgColor="white">
         <div className="split-container">
           <div className="split-image">
@@ -28,7 +28,7 @@ const RegisterPage = () => {
         <RegisterForm />
       </SectionBlock>
 
-      {/* Bottom Section Block */}
+      {/* Testimonials */}
       <SectionBlock bgColor="white">
         <div className="split-container reverse">
           <div className="split-text">

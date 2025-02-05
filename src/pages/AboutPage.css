@@ -1,119 +1,124 @@
-.register-page {
-    width: 100%;
-    max-width: 1440px;
-    margin: 0 auto;
-  }
-  
-  .split-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-  }
-  
-  .split-container.reverse {
-    flex-direction: row-reverse;
-  }
-  
-  .split-text {
-    flex: 2;
-    font-family: 'Crafty Girls', cursive;
-    text-align: left;
-  }
-  
-  .split-text h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    color: #333;
-  }
-  .split-text h2, 
-.subscribe-section h2 {
+@import url('https://fonts.googleapis.com/css2?family=Crafty+Girls&family=Diphylleia&display=swap');
+
+.about-page {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.about-section {
+  width: 100%;
+  height: 200px;
+  background-color: #594A47;
+  color: #F4EAE8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+}
+
+.about-header {
+  color: #F4EAE8;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #F4EAE8;
+  font-family: "Crafty Girls", cursive;
+  font-size: 64px;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.about-text {
+  color: #F4EAE8;
+  font-family: "Diphylleia", serif;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.4;
+  max-width: 1200px;
+  text-align: left;
+}
+
+
+.split-container {
+  width: 100%;
+  height: 210px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.split-container.reverse {
+  flex-direction: row-reverse;
+}
+
+.split-text {
+  flex: 2;
+  text-align: left;
+  padding: none;
+}
+
+.split-text h2 {
   color: #594A47;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #594A47;
   font-family: "Crafty Girls", cursive;
-  font-size: 48px;
-  font-style: normal;
+  font-size: 36px;
   font-weight: 400;
-  line-height: normal;
+  margin-bottom: 1rem;
 }
 
-  
-  .split-text p {
-    font-size: 1.2rem;
-    line-height: 1.5;
-    color: rgba(0, 0, 0, 0.7);
-  }
-  
-  .subscribe-section {
-    background-color: #f4eae8;
-    padding: 2rem;
-    display: flex;
+.split-text p {
+  color: #333;
+  font-family: "Diphylleia", serif;
+  font-size: 24px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+
+.split-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.split-image img {
+  width: 250px;  
+  height: auto;
+  border-radius: 10px;
+}
+
+
+.white-section {
+  background-color: white;
+}
+
+.light-pink-section {
+  background-color: #F4EAE8;
+}
+
+
+@media (max-width: 768px) {
+  .split-container {
     flex-direction: column;
-    align-items: center;
-    gap: 2rem;
+    height: auto;
+    text-align: center;
   }
-  
-  .subscribe-form {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
-    width: 100%;
-    max-width: 600px;
+
+  .split-container.reverse {
+    flex-direction: column;
   }
-  
-  .subscribe-input {
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    border: 1px solid #594A47;
-    background: #FFF;
-    font-size: 1rem;
-    color: rgba(0, 0, 0, 0.7);
+
+  .split-image img {
+    width: 80%;
   }
-  
-  .subscribe-input::placeholder {
-    color: rgba(0, 0, 0, 0.5);
+
+  .split-text {
+    text-align: center;
   }
-  
-  .subscribe-button {
-    grid-column: span 2;
-    padding: 0.5rem 1.5rem;
-    border-radius: 5px;
-    background-color: #594A47;
-    color: #FFF;
-    font-family: 'Crafty Girls', cursive;
-    font-size: 1.2rem;
-    font-weight: bold;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .subscribe-button:hover {
-    background-color: #4A3E3B;
-  }
-  
-  @media (max-width: 768px) {
-    .split-container {
-      flex-direction: column;
-      text-align: center;
-    }
-  
-    .split-image,
-    .split-text {
-      flex: unset;
-      width: 100%;
-    }
-  
-    .split-image img {
-      max-width: 80%;
-    }
-  
-    .subscribe-form {
-      grid-template-columns: 1fr;
-    }
-  
-    .subscribe-button {
-      grid-column: span 1;
-    }
-  }
-  
+}
