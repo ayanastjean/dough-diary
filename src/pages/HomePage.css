@@ -1,0 +1,130 @@
+.home-page {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  
+  .section-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1440px;
+    padding: 2rem;
+    margin: 0 auto;
+  }
+  
+  .white-section {
+    background-color: white;
+  }
+  
+  .reverse {
+    flex-direction: row-reverse;
+  }
+  
+  .section-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .section-image img {
+    width: 400px;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .section-text {
+    flex: 2;
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  .section-header {
+    color: #594A47;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #594A47;
+    font-family: "Crafty Girls", cursive;
+    font-size: 48px;
+    font-weight: 400;
+    text-align:center;
+  }
+  
+  .section-paragraph {
+    color: #333;
+    font-family: "Diphylleia", serif;
+    font-size: 24px;
+    line-height: 1.5;
+    margin: 0;
+    text-align: left;
+  }
+  
+  .register-button {
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    background-color: #594A47;
+    color: #FFF;
+    font-family: 'Crafty Girls', cursive;
+    font-size: 1.2rem;
+    font-weight: normal;
+    border: none;
+    cursor: pointer;
+    margin-top: 1rem;
+  }
+  
+  .register-button:hover {
+    background-color: #4A3E3B;
+  }
+  
+  .claim-header {
+    text-align: center;
+    font-weight: normal;
+    font-size: 40px;
+    font-family: "Diphylleia", serif;
+    color: #594A47;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #594A47;
+  }
+  
+
+  .kit-list {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+    margin: 0;
+    font-family: "Crafty Girls", cursive;
+    font-size: 24px;
+    color: #594A47;
+  }
+  
+  .kit-list li {
+    margin-bottom: none;
+  }
+  
+  @media (max-width: 768px) {
+    .section-block {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .reverse {
+      flex-direction: column;
+    }
+  
+    .section-image img {
+      width: 300px;
+    }
+  
+    .section-text {
+      text-align: center;
+    }
+  
+    .kit-list {
+      text-align: center;
+    }
+  }
+  

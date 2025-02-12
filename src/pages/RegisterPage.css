@@ -22,12 +22,6 @@
     align-items: center;
   }
   
-  .split-image.first img {
-    width: 441px;
-    height: 296px;
-    border-radius: 10px;
-  }
-  
   .split-image.second img {
     width: 107px;
     height: 112.264px;

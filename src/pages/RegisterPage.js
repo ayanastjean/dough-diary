@@ -2,6 +2,7 @@ import React from 'react';
 import './RegisterPage.css';
 import SectionBlock from '../components/SectionBlock';
 import RegisterForm from '../features/RegisterForm';
+import Testimonials from '../features/Testimonials';
 import Image1 from '../assets/calendar.png';
 import Image2 from '../assets/testimonial.png';
 
@@ -30,17 +31,7 @@ const RegisterPage = () => {
 
       {/* Testimonials */}
       <SectionBlock bgColor="white">
-        <div className="split-container reverse">
-          <div className="split-text">
-            <h2>Testimonials</h2>
-            <p>
-            “ Before The Dough Diary, I was too nervous to try baking from scratch, but now it’s my favorite hobby. The tips and recipes have given me so much confidence in the kitchen! “
-            </p>
-          </div>
-          <div className="split-image">
-            <img src={Image2} alt="figure" />
-          </div>
-        </div>
+        <Testimonials />
       </SectionBlock>
     </div>
   );

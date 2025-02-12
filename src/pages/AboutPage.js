@@ -30,7 +30,8 @@ const AboutPage = () => {
             <h2 className="section-title">What We Offer</h2>
             <p className="section-text">
               From beginner tutorials to advanced baking techniques, we aim to make baking accessible, fun, and rewarding for everyone.
-              Our community shares recipes, tips, and ideas to inspire your next baking adventure.
+              Our community shares recipes, tips, and ideas to inspire your next baking adventure. 
+              
             </p>
           </div>
         </div>
