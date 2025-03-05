@@ -4,7 +4,6 @@ import SectionBlock from '../components/SectionBlock';
 import RegisterForm from '../features/RegisterForm';
 import Testimonials from '../features/Testimonials';
 import Image1 from '../assets/calendar.png';
-import Image2 from '../assets/testimonial.png';
 
 const RegisterPage = () => {
   return (
