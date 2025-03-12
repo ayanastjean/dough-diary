@@ -1,13 +1,14 @@
 const express = require('express');
 const cors = require('cors');
 const sqlite3 = require('sqlite3').verbose();
-const path = require('path'); // ✅ Keep only ONE instance of path
+const path = require('path');
 
 const app = express();
 const PORT = 5001;
 
 app.use(cors());
 app.use(express.json());
+
 
 const dbPath = path.join(__dirname, 'db', 'tdd.db');
 const db = new sqlite3.Database(dbPath, (err) => {
@@ -18,7 +19,6 @@ const db = new sqlite3.Database(dbPath, (err) => {
     }
 });
 
-app.use('/public', express.static(path.join(__dirname, 'public')));
 
 app.post('/register', (req, res) => {
     const { first_name, last_name, email, address } = req.body;
@@ -35,6 +35,7 @@ app.post('/register', (req, res) => {
         res.status(200).json({ message: 'Submission successful', id: this.lastID });
     });
 });
+
 app.post('/contact', (req, res) => {
     const { name, email, message } = req.body;
 
@@ -50,7 +51,6 @@ app.post('/contact', (req, res) => {
         res.status(200).json({ message: 'Contact form submitted successfully', id: this.lastID });
     });
 });
-
 
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);

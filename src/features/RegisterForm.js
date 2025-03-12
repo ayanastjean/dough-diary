@@ -3,7 +3,7 @@ import { LoadScript, Autocomplete } from '@react-google-maps/api';
 import './RegisterForm.css';
 import Button from '../components/Button';
 
-const GOOGLE_MAPS_API_KEY = "AIzaSyAEEOrHUcY02Vd3qdIYVsERvW3YrnQSUwY";
+const GOOGLE_MAPS_API_KEY = process.env.REACT_APP_GOOGLE_MAPS_API_KEY;
 
 const RegisterForm = () => {
   const [firstName, setFirstName] = useState('');
@@ -16,10 +16,36 @@ const RegisterForm = () => {
   const handlePlaceSelect = () => {
     if (autocomplete) {
       const place = autocomplete.getPlace();
-      console.log("Selected Place:", place);
-      if (place.formatted_address) {
+      if (place && place.formatted_address) {
         setAddress(place.formatted_address);
       }
+    }
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const submissionData = {
+      first_name: firstName,
+      last_name: lastName,
+      email: email,
+      address: address
+    };
+
+    try {
+      const response = await fetch('http://localhost:5001/register', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(submissionData),
+      });
+
+      if (response.ok) {
+        setSubmitted(true);
+      } else {
+        console.error('Error submitting form');
+      }
+    } catch (error) {
+      console.error('Error:', error);
     }
   };
 
@@ -27,7 +53,7 @@ const RegisterForm = () => {
     <LoadScript googleMapsApiKey={GOOGLE_MAPS_API_KEY} libraries={['places']}>
       <div className="register-form-container">
         {!submitted ? (
-          <form className="register-form">
+          <form className="register-form" onSubmit={handleSubmit}>
             <h2 className="form-header">Register Now</h2>
             <div className="form-row">
               <input
@@ -47,7 +73,7 @@ const RegisterForm = () => {
                 required
               />
             </div>
-            <div className="form-row">
+            <div className="form-row full-width">
               <input
                 type="email"
                 placeholder="Email"
@@ -56,15 +82,16 @@ const RegisterForm = () => {
                 onChange={(e) => setEmail(e.target.value)}
                 required
               />
-            
+            </div>
+            <div className="form-row full-width">
               <Autocomplete
-                onLoad={setAutocomplete}
+                onLoad={(autocompleteInstance) => setAutocomplete(autocompleteInstance)}
                 onPlaceChanged={handlePlaceSelect}
               >
                 <input
                   type="text"
                   placeholder="Shipping Address"
-                  className="form-input"
+                  className="form-input google-autocomplete"
                   value={address}
                   onChange={(e) => setAddress(e.target.value)}
                   required
@@ -85,4 +112,3 @@ const RegisterForm = () => {
 };
 
 export default RegisterForm;
-

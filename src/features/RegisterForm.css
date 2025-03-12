@@ -35,6 +35,12 @@
   justify-content: center;
 }
 
+.form-row.full-width {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
 .form-input {
   flex: 1;
   padding: 0.5rem;
@@ -44,11 +50,22 @@
   font-size: 16px;
   font-family: "Diphylleia", serif;
   color: rgba(0, 0, 0, 0.7);
+  width: 100%;
 }
 
 .form-input::placeholder {
   color: rgba(0, 0, 0, 0.5);
 }
+
+
+.google-autocomplete {
+  width: 100% !important;
+}
+
+.google-autocomplete input {
+  width: 100% !important;
+}
+
 
 .register-button {
   padding: 0.5rem 1.5rem;
@@ -67,6 +84,7 @@
   background-color: #4A3E3B;
 }
 
+
 .confirmation-container {
   background-color: #f4eae8;
   padding: 1rem;
@@ -82,6 +100,7 @@
   margin: 0;
 }
 
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -92,6 +111,7 @@
     transform: translateY(0);
   }
 }
+
 
 @media (max-width: 768px) {
   .form-row {
