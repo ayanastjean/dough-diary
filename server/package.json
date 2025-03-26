@@ -13,7 +13,9 @@
   "description": "",
   "dependencies": {
     "@react-google-maps/api": "^2.20.6",
-    "express": "^4.21.2"
+    "@sendgrid/mail": "^8.1.4",
+    "express": "^4.21.2",
+    "nodemailer": "^6.10.0"
   },
   "devDependencies": {
     "nodemon": "^3.1.9"

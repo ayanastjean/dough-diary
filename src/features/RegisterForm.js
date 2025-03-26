@@ -3,7 +3,8 @@ import { LoadScript, Autocomplete } from '@react-google-maps/api';
 import './RegisterForm.css';
 import Button from '../components/Button';
 
-const GOOGLE_MAPS_API_KEY = process.env.REACT_APP_GOOGLE_MAPS_API_KEY;
+const GOOGLE_MAPS_API_KEY = "AIzaSyAEEOrHUcY02Vd3qdIYVsERvW3YrnQSUwY";
+
 
 const RegisterForm = () => {
   const [firstName, setFirstName] = useState('');
