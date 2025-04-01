@@ -31,53 +31,46 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="contact-form-container">
-      {!submitted ? (
-        <form className="contact-form" onSubmit={handleSubmit}>
-          <div className="form-row">
-            <div className="form-group">
-              <input
-                type="text"
-                placeholder="Name"
-                className="form-input"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                required
-              />
-            </div>
-            <div className="form-group">
-              <input
-                type="email"
-                placeholder="Email"
-                className="form-input"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-              />
-            </div>
-          </div>
-          <div className="form-row">
-            <div className="form-group">
-              <textarea
-                placeholder="Message"
-                className="form-input form-textarea"
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
-                required
-              />
-            </div>
-          </div>
-          <div className="form-row">
-            <Button text="Submit Entry" styleClass="register-button" type="submit" />
-          </div>
-        </form>
-      ) : (
-        <div className="confirmation-container">
-          <h2 className="confirmation-header">Thank you!</h2>
-          <p className="confirmation-text">Your message has been received.</p>
+    <div className="register-form-container">
+    {!submitted ? (
+      <form className="register-form" onSubmit={handleSubmit}>
+        <h2 className="form-header">Dear Diary . . .</h2>
+        <div className="form-row">
+          <input
+            type="text"
+            placeholder="Name"
+            className="form-input"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            required
+          />
+          <input
+            type="email"
+            placeholder="Email"
+            className="form-input"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
         </div>
-      )}
-    </div>
+        <div className="form-row full-width">
+          <textarea
+            placeholder="Message"
+            className="form-input form-textarea"
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+            required
+          />
+        </div>
+        <Button text="Submit Entry" styleClass="register-button" type="submit" />
+      </form>
+    ) : (
+      <div className="confirmation-container">
+        <h2 className="confirmation-header">Diary entry received!</h2>
+        <p className="confirmation-text">We’ll be in touch soon, baker!</p>
+      </div>
+    )}
+  </div>  
   );
 };
 
